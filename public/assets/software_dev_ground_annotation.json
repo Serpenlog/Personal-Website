@@ -1,0 +1,238 @@
+{
+    "Software_Development_Process.bpmn": [
+        {
+            "type": "Start Event",
+            "id": "StartEvent_1",
+            "name": "Start",
+            "description": "The process begins with the initiation of the software development project."
+        },
+        {
+            "type": "Task",
+            "id": "Task_RequirementsAnalysis",
+            "name": "Requirements Analysis",
+            "description": "A business analyst gathers user stories and requirements from stakeholders."
+        },
+        {
+            "type": "Exclusive Gateway",
+            "id": "Gateway_RequirementsClear",
+            "name": "Requirements Clear?",
+            "description": "A decision point to check if the requirements are clear."
+        },
+        {
+            "type": "Task",
+            "id": "Task_ClarifyRequirements",
+            "name": "Clarify Requirements",
+            "description": "Feedback loop to clarify unclear requirements with stakeholders."
+        },
+        {
+            "type": "Task",
+            "id": "Task_SystemDesign",
+            "name": "System Design",
+            "description": "System architects develop a detailed system architecture and design."
+        },
+        {
+            "type": "User Task",
+            "id": "Task_Approval",
+            "name": "Technical Lead Approval",
+            "description": "The system design is reviewed and approved by the technical lead."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Implementation",
+            "name": "Implementation",
+            "description": "The development team writes the code based on the approved design."
+        },
+        {
+            "type": "Exclusive Gateway",
+            "id": "Gateway_CodingDelayed",
+            "name": "Coding Delayed?",
+            "description": "A decision point to check if there are any coding delays."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Escalation",
+            "name": "Manage Delays",
+            "description": "Escalation process to handle coding delays."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Testing",
+            "name": "Testing",
+            "description": "The QA team performs unit, integration, system, and user acceptance testing."
+        },
+        {
+            "type": "Exclusive Gateway",
+            "id": "Gateway_DefectsFound",
+            "name": "Defects Found?",
+            "description": "A decision point to check if defects were found during testing."
+        },
+        {
+            "type": "Task",
+            "id": "Task_FixDefects",
+            "name": "Fix Defects",
+            "description": "The development team fixes any defects found during testing."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Deployment",
+            "name": "Deployment",
+            "description": "Once approved, the software is deployed to the production environment."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Maintenance",
+            "name": "Maintenance",
+            "description": "Post-deployment monitoring and ongoing maintenance to ensure software stability."
+        },
+        {
+            "type": "Exclusive Gateway",
+            "id": "Gateway_CriticalIssues",
+            "name": "Critical Issues?",
+            "description": "A decision point to check if any critical issues are found during maintenance."
+        },
+        {
+            "type": "Task",
+            "id": "Task_Hotfix",
+            "name": "Develop Hotfix/Patch",
+            "description": "Development of a hotfix or patch for critical issues found during maintenance."
+        },
+        {
+            "type": "Task",
+            "id": "Task_FinalReview",
+            "name": "Final Review and Closure",
+            "description": "Final review of the software post-maintenance. If all major issues are resolved, the project is officially closed."
+        },
+        {
+            "type": "End Event",
+            "id": "EndEvent_1",
+            "name": "End",
+            "description": "Marks the official closure of the project."
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_1",
+            "sourceRef": "StartEvent_1",
+            "targetRef": "Task_RequirementsAnalysis"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_181xx95",
+            "sourceRef": "Task_RequirementsAnalysis",
+            "targetRef": "Gateway_RequirementsClear"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_3",
+            "sourceRef": "Gateway_RequirementsClear",
+            "targetRef": "Task_SystemDesign"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_4",
+            "sourceRef": "Gateway_RequirementsClear",
+            "targetRef": "Task_ClarifyRequirements"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_5",
+            "sourceRef": "Task_ClarifyRequirements",
+            "targetRef": "Task_RequirementsAnalysis"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_6",
+            "sourceRef": "Task_SystemDesign",
+            "targetRef": "Task_Approval"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_7",
+            "sourceRef": "Task_Approval",
+            "targetRef": "Task_Implementation"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_8",
+            "sourceRef": "Task_Implementation",
+            "targetRef": "Gateway_CodingDelayed"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_9",
+            "sourceRef": "Gateway_CodingDelayed",
+            "targetRef": "Task_Testing"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_10",
+            "sourceRef": "Gateway_CodingDelayed",
+            "targetRef": "Task_Escalation"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_11",
+            "sourceRef": "Task_Escalation",
+            "targetRef": "Gateway_CodingDelayed"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_12",
+            "sourceRef": "Task_Testing",
+            "targetRef": "Gateway_DefectsFound"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_13",
+            "sourceRef": "Gateway_DefectsFound",
+            "targetRef": "Task_Deployment"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_14",
+            "sourceRef": "Gateway_DefectsFound",
+            "targetRef": "Task_FixDefects"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_15",
+            "sourceRef": "Task_FixDefects",
+            "targetRef": "Gateway_DefectsFound"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_16",
+            "sourceRef": "Task_Deployment",
+            "targetRef": "Task_Maintenance"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_17",
+            "sourceRef": "Task_Maintenance",
+            "targetRef": "Gateway_CriticalIssues"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_18",
+            "sourceRef": "Gateway_CriticalIssues",
+            "targetRef": "Task_FinalReview"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_19",
+            "sourceRef": "Gateway_CriticalIssues",
+            "targetRef": "Task_Hotfix"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_20",
+            "sourceRef": "Task_Hotfix",
+            "targetRef": "Task_Maintenance"
+        },
+        {
+            "type": "Sequence Flow",
+            "id": "Flow_21",
+            "sourceRef": "Task_FinalReview",
+            "targetRef": "EndEvent_1"
+        }
+    ]
+}
