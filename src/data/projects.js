@@ -264,10 +264,10 @@ const projects = [
         title: "Fabrication gallery",
         items: [
           { src: `${assetBase}ufluidic-cad-model.PNG`, alt: "Microfluidic CAD layout" },
-          { src: `${assetBase}ufluidic-resin-print1.jpg`, alt: "Resin-printed microfluidic mold" },
-          { src: `${assetBase}ufluidic-resin-print2.jpg`, alt: "Second resin print of the mold" },
+          { src: `${assetBase}ufluidic-resin-print2.jpg`, alt: "Resin-printed microfluidic mold" },
+          { src: `${assetBase}ufluidic-resin-print1.jpg`, alt: "Resin-printed microfluidic mold close-up" },
           { src: `${assetBase}ufluidic-pdms-cast1.jpg`, alt: "PDMS cast device" },
-          { src: `${assetBase}ufluidic-pdms-cast2.jpg`, alt: "PDMS cast device close-up" }
+          { src: `${assetBase}ufluidic-pdms-cast2.jpg`, alt: "PDMS cast device upside down" }
         ]
       },
       embeds: [
@@ -384,21 +384,21 @@ const projects = [
       gallery: {
         title: "Generative design journey",
         items: [
-          { src: `${assetBase}headphone_holder_gen1.PNG`, alt: "Generative design iteration 1" },
-          { src: `${assetBase}headphone_holder_gen2.PNG`, alt: "Generative design iteration 2" },
-          { src: `${assetBase}headphone_holder_gen3.PNG`, alt: "Generative design iteration 3" },
-          { src: `${assetBase}headphone_holder_gen4.PNG`, alt: "Generative design iteration 4" },
-          { src: `${assetBase}headphone_holder_gen5.PNG`, alt: "Generative design iteration 5" },
-          { src: `${assetBase}headphone_holder_gen6.PNG`, alt: "Generative design obstacle miss" },
-          { src: `${assetBase}headphone_holder_iterations1.JPG`, alt: "Iteration comparison" },
-          { src: `${assetBase}headphone_holder_iteration3.JPG`, alt: "Iteration detail" },
+          { src: `${assetBase}headphone_holder_gen1.PNG`, alt: "Generative design model view 1" },
+          { src: `${assetBase}headphone_holder_gen2.PNG`, alt: "Generative design model view 2" },
+          { src: `${assetBase}headphone_holder_gen3.PNG`, alt: "Generative design model view 3" },
+          { src: `${assetBase}headphone_holder_gen4.PNG`, alt: "Generative design iterations" },
+          { src: `${assetBase}headphone_holder_gen5.PNG`, alt: "Generative design final iteration view 1" },
+          { src: `${assetBase}headphone_holder_gen6.PNG`, alt: "Generative design final iteration view 2" },
+          { src: `${assetBase}headphone_holder_iterations1.JPG`, alt: "Iteration comparison back" },
+          { src: `${assetBase}headphone_holder_iteration3.JPG`, alt: "Iteration comparison details" },
           { src: `${assetBase}headphone_pla_prototype2.jpg`, alt: "PLA prototype" },
-          { src: `${assetBase}headphone_pla_protoype1.jpg`, alt: "PLA prototype alternate" },
+          { src: `${assetBase}headphone_pla_protoype1.jpg`, alt: "PLA prototype alternate view" },
           { src: `${assetBase}headphone_holder_obstacle_ignore.jpg`, alt: "Obstacle geometry ignored" },
-          { src: `${assetBase}headphone_holder_final1.jpg`, alt: "Final SLS part" },
-          { src: `${assetBase}headphone_holder_final2.jpg`, alt: "Final SLS part angle" },
-          { src: `${assetBase}headphone_holder_final3.jpg`, alt: "Final SLS part detail" },
-          { src: `${assetBase}headphone_holder_final4.jpg`, alt: "Final SLS part front" }
+          { src: `${assetBase}headphone_holder_final2.jpg`, alt: "Final SLS part" },
+          { src: `${assetBase}headphone_holder_final1.jpg`, alt: "Final SLS part angled" },
+          { src: `${assetBase}headphone_holder_final3.jpg`, alt: "Final SLS part holding several things" },
+          { src: `${assetBase}headphone_holder_final4.jpg`, alt: "Final SLS part holding headphones and charger" }
         ]
       },
       embeds: [
@@ -486,7 +486,7 @@ const projects = [
       gallery: {
         title: "Print-in-place gallery",
         items: [
-          { src: `${assetBase}IMG_6752.jpg`, alt: "TPU/PLA pliers hero" },
+          { src: `${assetBase}IMG_6752.jpg`, alt: "TPU/PLA pliers" },
           { src: `${assetBase}IMG_6740.jpg`, alt: "Pliers angle 1" },
           { src: `${assetBase}IMG_6741.jpg`, alt: "Pliers angle 2" },
           { src: `${assetBase}IMG_6742.jpg`, alt: "Pliers angle 3" },
@@ -501,19 +501,15 @@ const projects = [
       ],
       gifEmbeds: [
         {
-          title: "Flex test demo",
           url: "https://giphy.com/embed/YAhs3rJPzi5hJgROhP"
         },
         {
-          title: "Grip motion",
           url: "https://giphy.com/embed/gA7QCfl7E8DRRx9t9y"
         },
         {
-          title: "Spring compression",
           url: "https://giphy.com/embed/s9vERsKYhdbtLBrSJH"
         },
         {
-          title: "Assembly demo",
           url: "https://giphy.com/embed/FHk67ShcxPJfALXXQQ"
         }
       ]
