@@ -3,14 +3,157 @@ const assetBase = `${import.meta.env.BASE_URL}assets/`;
 const projects = [
   {
     id: "project2",
-    title: "Algorithmic Research Toolkit",
-    slug: "algorithmic-research-toolkit",
+    title: "Fault Detection in Business Process Logic Systems Using LLMs",
+    slug: "bpmn-fault-detection-llm-research",
     category: "Computer Science",
-    image: `${assetBase}project2.jpg`,
+    image: `${assetBase}Software_Dev_Ground.PNG`,
     description:
-      "A modular toolkit of algorithms and visualizations that make research workflows faster and clearer.",
+      "A research pipeline that detects, localizes, and explains BPMN modeling faults with LLMs grounded by structured annotations and RAG.",
     summary:
-      "Designed to streamline research experiments with reusable algorithm modules, data pipelines, and visualization dashboards."
+      "Built and evaluated a workflow that pairs BPMN parsing, JSON annotations, and retrieval-augmented LLM reasoning to flag errors and propose corrections with high precision.",
+    details: {
+      overview:
+        "This research project explored how Large Language Models (LLMs) can detect, localize, and correct faults in BPMN (Business Process Model and Notation) workflows. The system combines structured BPMN parsing, NER-style annotations, and Retrieval-Augmented Generation (RAG) to produce actionable diagnostics that explain what is wrong, where it occurs, and how to fix it. The project was presented at a computer science research showcase and earned third place.",
+      highlights: [
+        "Defined an error taxonomy for BPMN faults: event, task, link, and logic errors.",
+        "Built a multi-domain dataset of faulty vs corrected BPMN workflows for detection and correction.",
+        "Designed a structured annotation pipeline that grounds LLM reasoning in BPMN entities.",
+        "Implemented a RAG-based loop to retrieve rules/specs and improve fault localization.",
+        "Reported strong detection performance (precision 0.92, recall 0.88, F1 0.91)."
+      ],
+      links: [
+        {
+          label: "Research poster (PDF, third-place showcase)",
+          url: `${assetBase}LLM-Based%20Business%20Process%20Fault%20Detection%20System%20Independent%20Research.pdf`
+        },
+        {
+          label: "Example annotation JSON",
+          url: `${assetBase}software_dev_ground_annotation.json`
+        },
+        {
+          label: "Annotated specification file (DOCX)",
+          url: `${assetBase}Software_Development_Lifecycle_Specs_File_Annotated.docx`
+        }
+      ],
+      sections: [
+        {
+          title: "Motivation",
+          paragraphs: [
+            "BPMN diagrams are visually intuitive but often hide structural and logical mistakes that can cause dead ends, infinite loops, broken approvals, and compliance problems. Traditional validators catch only syntactic issues; semantic errors still require expert review.",
+            "LLMs provide strong reasoning about intent and semantics, but without grounding they can be vague or hallucinate. This project uses RAG to anchor the model in BPMN rules, domain specifications, and annotated process elements."
+          ]
+        },
+        {
+          title: "Error taxonomy (with examples)",
+          paragraphs: [
+            "The taxonomy organizes faults into four categories used for dataset construction and evaluation. The examples below are taken from the software development lifecycle workflow."
+          ],
+          bullets: [
+            "Event errors: missing start or end events that make a process non-executable.",
+            "Task errors: missing or duplicated tasks, or sequences that omit a required step.",
+            "Link errors: broken or incorrect sequence flows that create dead ends or unreachable states.",
+            "Logic errors: workflows that contradict the specification or misuse gateways."
+          ]
+        },
+        {
+          title: "Dataset construction",
+          paragraphs: [
+            "A custom dataset of BPMN workflows was assembled across multiple business domains: loan and approval workflows, order and payment processing, restaurant/service operations, supply chain flows, onboarding and internal operations, software development lifecycles, and project management scenarios.",
+            "For each domain, paired faulty and corrected BPMN files were created. File variants align with specific fault categories, enabling both detection and correction benchmarking."
+          ]
+        },
+        {
+          title: "Annotation & structured representation",
+          paragraphs: [
+            "BPMN XML is treated like a structured document. The pipeline extracts entities (tasks, events, gateways, flows) and converts them into JSON annotations used for retrieval and LLM grounding.",
+            "The annotation workflow combines LLM-assisted entity extraction, manual refinement, and tool-assisted labeling using Doccano and Label Studio. These annotations serve as a graph-like representation of the process."
+          ]
+        },
+        {
+          title: "System architecture",
+          paragraphs: [
+            "The system ingests BPMN XML, extracts entities, embeds them for retrieval, and prompts an LLM with retrieved rules/specification snippets. The output includes the fault type, localized BPMN element references, and correction suggestions.",
+            "Corrections are applied to produce revised BPMN files, which are compared against ground truth to calculate detection and correction metrics."
+          ]
+        },
+        {
+          title: "RAG pipeline flow",
+          bullets: [
+            "Load ground-truth and faulty BPMN files.",
+            "Extract entities and generate embeddings.",
+            "Retrieve relevant BPMN rules and specification text.",
+            "Generate fault diagnosis and correction suggestions.",
+            "Apply corrections to BPMN files and compare against ground truth.",
+            "Compute detection metrics and iterate across LLM variants."
+          ]
+        },
+        {
+          title: "Tools & stack",
+          bullets: [
+            "LLM reasoning: GPT-4o for fault explanation and correction proposals.",
+            "Parsing/extraction: BPMN XML parsing and entity labeling.",
+            "Retrieval & embeddings: SentenceTransformers for similarity search.",
+            "Document processing: pdfplumber and spaCy for text extraction and NLP.",
+            "Annotation tools: Doccano and Label Studio for structured labeling."
+          ]
+        },
+        {
+          title: "Results",
+          paragraphs: [
+            "The pipeline achieved strong detection performance with precision 0.92, recall 0.88, and F1 score 0.91. RAG grounding significantly improved localization accuracy and the specificity of correction recommendations."
+          ]
+        },
+        {
+          title: "My contributions",
+          bullets: [
+            "Designed the BPMN fault taxonomy and dataset structure.",
+            "Built and curated multi-domain faulty vs corrected BPMN pairs.",
+            "Developed the annotation schema and JSON artifact workflow.",
+            "Implemented the RAG prompting strategy and evaluation loop.",
+            "Documented findings, limitations, and future directions."
+          ]
+        },
+        {
+          title: "Limitations",
+          bullets: [
+            "Ambiguity in natural-language specifications can obscure intent.",
+            "Domain-specific rules limit generalization without extra retrieval context.",
+            "High-quality annotations require significant human effort.",
+            "Proposed fixes still need validation against real business goals."
+          ]
+        },
+        {
+          title: "Future directions",
+          bullets: [
+            "Improve correction accuracy for complex logic faults.",
+            "Expand entity coverage for richer workflow semantics.",
+            "Benchmark across more LLMs and retrieval strategies.",
+            "Incorporate feedback-driven adaptation for enterprise-scale BPMN repositories."
+          ]
+        }
+      ],
+      gallery: {
+        title: "Error type examples (software development lifecycle BPMN)",
+        items: [
+          {
+            src: `${assetBase}Software_Dev_Event_Error.PNG`,
+            alt: "Event error example: missing start event"
+          },
+          {
+            src: `${assetBase}Software_Dev_Task_Error.PNG`,
+            alt: "Task error example: missing clarify requirements task"
+          },
+          {
+            src: `${assetBase}Software_Dev_Link_Error.PNG`,
+            alt: "Link error example: missing sequence flow between approval and implementation"
+          },
+          {
+            src: `${assetBase}Software_Dev_Logic_Error.PNG`,
+            alt: "Logic error example: task instructs not to fix defects"
+          }
+        ]
+      }
+    }
   },
   {
     id: "project3",
