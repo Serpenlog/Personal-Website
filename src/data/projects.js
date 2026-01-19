@@ -1,10 +1,12 @@
+const assetBase = `${import.meta.env.BASE_URL}assets/`;
+
 const projects = [
   {
     id: "project2",
     title: "Algorithmic Research Toolkit",
     slug: "algorithmic-research-toolkit",
     category: "Computer Science",
-    image: "/assets/project2.jpg",
+    image: `${assetBase}project2.jpg`,
     description:
       "A modular toolkit of algorithms and visualizations that make research workflows faster and clearer.",
     summary:
@@ -15,7 +17,7 @@ const projects = [
     title: "Distributed Systems Sandbox",
     slug: "distributed-systems-sandbox",
     category: "Computer Science",
-    image: "/assets/project3.jpg",
+    image: `${assetBase}project3.jpg`,
     description:
       "A sandbox of distributed system prototypes focused on reliability, throughput, and observability.",
     summary:
@@ -26,7 +28,7 @@ const projects = [
     title: "Low-Cost Syringe Pump",
     slug: "syringe-pump",
     category: "Digital Fabrication",
-    image: "/assets/syringe-pump.jpg",
+    image: `${assetBase}syringe-pump.jpg`,
     description:
       "A syringe pump prototype that delivers medical-grade performance at a significantly lower cost.",
     summary:
@@ -108,9 +110,9 @@ const projects = [
       gallery: {
         title: "Gallery",
         items: [
-          { src: "/assets/syringe-pump.jpg", alt: "Finished syringe pump prototype" },
-          { src: "/assets/syringe-pump-render1.png", alt: "Syringe pump CAD rendering" },
-          { src: "/assets/syringe-pump-render2.png", alt: "Syringe pump CAD rendering detail" }
+          { src: `${assetBase}syringe-pump.jpg`, alt: "Finished syringe pump prototype" },
+          { src: `${assetBase}syringe-pump-render1.png`, alt: "Syringe pump CAD rendering" },
+          { src: `${assetBase}syringe-pump-render2.png`, alt: "Syringe pump CAD rendering detail" }
         ]
       },
       embeds: [
@@ -126,7 +128,7 @@ const projects = [
     title: "Microfluidic Pinch-Flow Device",
     slug: "microfluidic-pinch-flow-device",
     category: "Digital Fabrication",
-    image: "/assets/ufluidic-resin-print1.jpg",
+    image: `${assetBase}ufluidic-resin-print1.jpg`,
     description:
       "A resin-printed microfluidic device that manipulates tiny volumes of fluid for diagnostic testing.",
     summary:
@@ -261,11 +263,11 @@ const projects = [
       gallery: {
         title: "Fabrication gallery",
         items: [
-          { src: "/assets/ufluidic-cad-model.PNG", alt: "Microfluidic CAD layout" },
-          { src: "/assets/ufluidic-resin-print1.jpg", alt: "Resin-printed microfluidic mold" },
-          { src: "/assets/ufluidic-resin-print2.jpg", alt: "Second resin print of the mold" },
-          { src: "/assets/ufluidic-pdms-cast1.jpg", alt: "PDMS cast device" },
-          { src: "/assets/ufluidic-pdms-cast2.jpg", alt: "PDMS cast device close-up" }
+          { src: `${assetBase}ufluidic-cad-model.PNG`, alt: "Microfluidic CAD layout" },
+          { src: `${assetBase}ufluidic-resin-print1.jpg`, alt: "Resin-printed microfluidic mold" },
+          { src: `${assetBase}ufluidic-resin-print2.jpg`, alt: "Second resin print of the mold" },
+          { src: `${assetBase}ufluidic-pdms-cast1.jpg`, alt: "PDMS cast device" },
+          { src: `${assetBase}ufluidic-pdms-cast2.jpg`, alt: "PDMS cast device close-up" }
         ]
       },
       embeds: [
@@ -281,7 +283,7 @@ const projects = [
     title: "Generative SLS Headphone Holder",
     slug: "generative-sls-headphone-holder",
     category: "Digital Fabrication",
-    image: "/assets/headphone_holder_final4.jpg",
+    image: `${assetBase}headphone_holder_final4.jpg`,
     description:
       "An SLS printed headphone holder optimized through generative design simulations for strength.",
     summary:
@@ -382,21 +384,21 @@ const projects = [
       gallery: {
         title: "Generative design journey",
         items: [
-          { src: "/assets/headphone_holder_gen1.PNG", alt: "Generative design iteration 1" },
-          { src: "/assets/headphone_holder_gen2.PNG", alt: "Generative design iteration 2" },
-          { src: "/assets/headphone_holder_gen3.PNG", alt: "Generative design iteration 3" },
-          { src: "/assets/headphone_holder_gen4.PNG", alt: "Generative design iteration 4" },
-          { src: "/assets/headphone_holder_gen5.PNG", alt: "Generative design iteration 5" },
-          { src: "/assets/headphone_holder_gen6.PNG", alt: "Generative design obstacle miss" },
-          { src: "/assets/headphone_holder_iterations1.JPG", alt: "Iteration comparison" },
-          { src: "/assets/headphone_holder_iteration3.JPG", alt: "Iteration detail" },
-          { src: "/assets/headphone_pla_prototype2.jpg", alt: "PLA prototype" },
-          { src: "/assets/headphone_pla_protoype1.jpg", alt: "PLA prototype alternate" },
-          { src: "/assets/headphone_holder_obstacle_ignore.jpg", alt: "Obstacle geometry ignored" },
-          { src: "/assets/headphone_holder_final1.jpg", alt: "Final SLS part" },
-          { src: "/assets/headphone_holder_final2.jpg", alt: "Final SLS part angle" },
-          { src: "/assets/headphone_holder_final3.jpg", alt: "Final SLS part detail" },
-          { src: "/assets/headphone_holder_final4.jpg", alt: "Final SLS part front" }
+          { src: `${assetBase}headphone_holder_gen1.PNG`, alt: "Generative design iteration 1" },
+          { src: `${assetBase}headphone_holder_gen2.PNG`, alt: "Generative design iteration 2" },
+          { src: `${assetBase}headphone_holder_gen3.PNG`, alt: "Generative design iteration 3" },
+          { src: `${assetBase}headphone_holder_gen4.PNG`, alt: "Generative design iteration 4" },
+          { src: `${assetBase}headphone_holder_gen5.PNG`, alt: "Generative design iteration 5" },
+          { src: `${assetBase}headphone_holder_gen6.PNG`, alt: "Generative design obstacle miss" },
+          { src: `${assetBase}headphone_holder_iterations1.JPG`, alt: "Iteration comparison" },
+          { src: `${assetBase}headphone_holder_iteration3.JPG`, alt: "Iteration detail" },
+          { src: `${assetBase}headphone_pla_prototype2.jpg`, alt: "PLA prototype" },
+          { src: `${assetBase}headphone_pla_protoype1.jpg`, alt: "PLA prototype alternate" },
+          { src: `${assetBase}headphone_holder_obstacle_ignore.jpg`, alt: "Obstacle geometry ignored" },
+          { src: `${assetBase}headphone_holder_final1.jpg`, alt: "Final SLS part" },
+          { src: `${assetBase}headphone_holder_final2.jpg`, alt: "Final SLS part angle" },
+          { src: `${assetBase}headphone_holder_final3.jpg`, alt: "Final SLS part detail" },
+          { src: `${assetBase}headphone_holder_final4.jpg`, alt: "Final SLS part front" }
         ]
       },
       embeds: [
@@ -412,7 +414,7 @@ const projects = [
     title: "TPU/PLA 3D Printed Pliers",
     slug: "tpu-pla-pliers",
     category: "Digital Fabrication",
-    image: "/assets/IMG_6752.jpg",
+    image: `${assetBase}IMG_6752.jpg`,
     description:
       "A flexible and durable 3D printed pliers set combining TPU and PLA for function and grip.",
     summary:
@@ -484,11 +486,11 @@ const projects = [
       gallery: {
         title: "Print-in-place gallery",
         items: [
-          { src: "/assets/IMG_6752.jpg", alt: "TPU/PLA pliers hero" },
-          { src: "/assets/IMG_6740.jpg", alt: "Pliers angle 1" },
-          { src: "/assets/IMG_6741.jpg", alt: "Pliers angle 2" },
-          { src: "/assets/IMG_6742.jpg", alt: "Pliers angle 3" },
-          { src: "/assets/IMG_6743.jpg", alt: "Pliers angle 4" }
+          { src: `${assetBase}IMG_6752.jpg`, alt: "TPU/PLA pliers hero" },
+          { src: `${assetBase}IMG_6740.jpg`, alt: "Pliers angle 1" },
+          { src: `${assetBase}IMG_6741.jpg`, alt: "Pliers angle 2" },
+          { src: `${assetBase}IMG_6742.jpg`, alt: "Pliers angle 3" },
+          { src: `${assetBase}IMG_6743.jpg`, alt: "Pliers angle 4" }
         ]
       },
       embeds: [
@@ -522,7 +524,7 @@ const projects = [
     title: "Functional Bike Mount",
     slug: "functional-bike-mount",
     category: "Digital Fabrication",
-    image: "/assets/bike_mount_main2.jpg",
+    image: `${assetBase}bike_mount_main2.jpg`,
     description:
       "A fully functional bike mount designed for durability and daily use through iterative printing.",
     summary:
@@ -598,30 +600,30 @@ const projects = [
       gallery: {
         title: "Prototype gallery",
         items: [
-          { src: "/assets/bike_mount_assembly_top_parts.jpg", alt: "Bike mount top parts" },
-          { src: "/assets/bike_mount_assembly_bot_parts.jpg", alt: "Bike mount bottom parts" },
-          { src: "/assets/bike_mount_assembly_clamp_top.jpg", alt: "Clamp assembly" },
+          { src: `${assetBase}bike_mount_assembly_top_parts.jpg`, alt: "Bike mount top parts" },
+          { src: `${assetBase}bike_mount_assembly_bot_parts.jpg`, alt: "Bike mount bottom parts" },
+          { src: `${assetBase}bike_mount_assembly_clamp_top.jpg`, alt: "Clamp assembly" },
           {
-            src: "/assets/bike_mount_assembly_detent_holder_screws.jpg",
+            src: `${assetBase}bike_mount_assembly_detent_holder_screws.jpg`,
             alt: "Detent holder screws"
           },
-          { src: "/assets/bike_mount_assembly_detent_system1.jpg", alt: "Detent system setup" },
-          { src: "/assets/bike_mount_assembly_detent_system.jpg", alt: "Detent system close-up" },
-          { src: "/assets/bike_mount_assembly_detent_ball.jpg", alt: "Detent ball placement" },
-          { src: "/assets/bike_mount_assembly_detent_spring.jpg", alt: "Detent spring placement" },
-          { src: "/assets/bike_mount_assembly_top_view.jpg", alt: "Top view assembly" },
-          { src: "/assets/bike_mount_assembly_together1.jpg", alt: "Bike mount assembled" },
-          { src: "/assets/bike_mount_generative_design.PNG", alt: "Generative design exploration" },
-          { src: "/assets/bike_mount_main1.jpg", alt: "Bike mount main view" },
-          { src: "/assets/bike_mount_main2.jpg", alt: "Bike mount main view two" },
-          { src: "/assets/bike_mount_main3.jpg", alt: "Bike mount main view three" },
-          { src: "/assets/bike_mount_back1.jpg", alt: "Bike mount back view" },
-          { src: "/assets/bike_mount_bar1.jpg", alt: "Phone holder bar 1" },
-          { src: "/assets/bike_mount_bar2.jpg", alt: "Phone holder bar 2" },
-          { src: "/assets/bike_mount_bar3.jpg", alt: "Phone holder bar 3" },
-          { src: "/assets/bike_mount_bar4.jpg", alt: "Phone holder bar 4" },
-          { src: "/assets/bike_mount_bar5.jpg", alt: "Phone holder bar 5" },
-          { src: "/assets/bike_mount_bar6.jpg", alt: "Phone holder bar 6" }
+          { src: `${assetBase}bike_mount_assembly_detent_system1.jpg`, alt: "Detent system setup" },
+          { src: `${assetBase}bike_mount_assembly_detent_system.jpg`, alt: "Detent system close-up" },
+          { src: `${assetBase}bike_mount_assembly_detent_ball.jpg`, alt: "Detent ball placement" },
+          { src: `${assetBase}bike_mount_assembly_detent_spring.jpg`, alt: "Detent spring placement" },
+          { src: `${assetBase}bike_mount_assembly_top_view.jpg`, alt: "Top view assembly" },
+          { src: `${assetBase}bike_mount_assembly_together1.jpg`, alt: "Bike mount assembled" },
+          { src: `${assetBase}bike_mount_generative_design.PNG`, alt: "Generative design exploration" },
+          { src: `${assetBase}bike_mount_main1.jpg`, alt: "Bike mount main view" },
+          { src: `${assetBase}bike_mount_main2.jpg`, alt: "Bike mount main view two" },
+          { src: `${assetBase}bike_mount_main3.jpg`, alt: "Bike mount main view three" },
+          { src: `${assetBase}bike_mount_back1.jpg`, alt: "Bike mount back view" },
+          { src: `${assetBase}bike_mount_bar1.jpg`, alt: "Phone holder bar 1" },
+          { src: `${assetBase}bike_mount_bar2.jpg`, alt: "Phone holder bar 2" },
+          { src: `${assetBase}bike_mount_bar3.jpg`, alt: "Phone holder bar 3" },
+          { src: `${assetBase}bike_mount_bar4.jpg`, alt: "Phone holder bar 4" },
+          { src: `${assetBase}bike_mount_bar5.jpg`, alt: "Phone holder bar 5" },
+          { src: `${assetBase}bike_mount_bar6.jpg`, alt: "Phone holder bar 6" }
         ]
       },
       embeds: [

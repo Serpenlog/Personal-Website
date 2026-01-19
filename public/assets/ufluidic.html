@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfluidic Pinch Flow Fractionation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-root"></div>
+<main>
+    <div id="markdown-content">
+<h1>MicroFluidic Pinch Flow Fractionation</h1>
+<h2>Introduction:</h2>
+<h3>Generally describe ufluidic devices</h3>
+<p>Microfluidic devices are systems that precisely manipulate small volumes of fluids—typically in the microliter to nanoliter range—through networks of tiny channels. These devices are designed to perform complex tasks such as mixing, sorting, or analyzing fluids and suspended particles, all on a miniaturized &quot;lab-on-a-chip&quot; platform. Their small scale enables rapid, high-throughput analysis with low reagent consumption, making them widely useful in diagnostics, biomedical research, drug development, and environmental testing.</p>
+<h3>What is pinch flow fractionation? How does it work?</h3>
+<p>Pinched Flow Fractionation is a passive microfluidic technique used for the continuous separation of particles by size. It works by introducing two fluid streams—one carrying suspended particles and another as a sheath flow—into a narrow constriction (the &quot;pinched&quot; segment). In this segment, the sheath flow pushes all particles toward one sidewall, aligning them into a single streamline regardless of size.
+As the channel broadens downstream, particles begin to drift apart due to their different sizes: larger particles are pushed further away from the sidewall due to their centers being farther from the aligned streamline, while smaller particles remain closer to the wall. The spatial separation becomes significant in the broader section, allowing the particles to be collected through separate outlet channels.
+This method is advantageous because it relies solely on laminar flow and channel geometry—no external forces or fields are needed—making it simple, cost-effective, and scalable.</p>
+<h3>Provide at least one specific application that requires sorting of small particles. Include at least one citation from primary literature.</h3>
+<p>One important application of particle sorting is in cell separation for biomedical diagnostics. For instance, isolating circulating tumor cells (CTCs) from blood is a crucial step in early cancer detection and monitoring. Since CTCs are typically larger than most other blood cells, techniques like Pinched Flow Fractionation can be used to separate and enrich CTCs from patient samples without the need for labels or complex instrumentation.</p>
+<p><a href="https://pubs.acs.org/doi/10.1021/ac049863r">This foundational study demonstrated high-efficiency separation of particles based on size using a pinched microchannel design, forming the basis for many modern microfluidic sorting systems.</a></p>
+<p>Another important real-world application of particle sorting is the separation of microplastic particles from water samples in environmental research. These plastic particles, often ranging from tens to hundreds of microns, must be distinguished from organic matter, sand, or other debris. PFF offers a label-free, continuous method for sorting microplastics by size prior to downstream analysis such as spectroscopy or chemical assays.</p>
+<p><a href="https://pubs.rsc.org/en/content/articlelanding/2021/lc/d1lc00744k">This study demonstrates the use of a parylene-coated 3D-printed mold to fabricate microfluidic devices capable of robust microplastic separation under realistic sample conditions. Their work highlights how modern fabrication techniques can expand the applicability of PFF to real-world challenges.</a></p>
+<h2>Instructions:</h2>
+<h3>CAD Model</h3>
+<p>The microfluidic device is designed to perform Pinched Flow Fractionation (PFF) with two inlets, a pinched segment, a broadening region, and four outlets for effective particle sorting.
+Key Design Features:</p>
+<ul>
+<li>Inlet channels:
+Two inlets (1 mm wide, 13.2 mm long) leading to the pinched segment.</li>
+<li>Pinched segment:
+3.5 mm long, 0.75 mm wide (ensures effective particle alignment).</li>
+<li>Broadening segment:
+18.13 mm wide (designed to evenly distribute flow across four outlets).</li>
+<li>Outlet channels:
+Four equal 4 mm wide outlets, ensuring balanced flow and space for barb fittings.</li>
+<li>Spacing considerations:
+All inlets and outlets are sufficiently spaced apart to accommodate barb fittings.
+Bonding buffer zones (3 mm from edges) remain clear of features for proper sealing.</li>
+</ul>
+<h3>Print and cure mold</h3>
+<h4>A. Printing the Mold</h4>
+<p>Print the mold using a Formlabs SLA 3D printer with black or high-temperature resin.
+Use a 0.025 mm or 0.05 mm layer thickness to maintain high precision.
+Orient the mold flat on the build plate to ensure a smooth bottom surface and ignore cupping warning when printing.
+Make sure the device prints flat on the build plate and no support is on the inside of the device.</p>
+<h4>B. Post-Processing the Printed Mold</h4>
+<ol>
+<li><p>IPA Wash:
+Rinse in isopropyl alcohol (IPA) for 5 minutes on the print bed.
+Transfer to a fresh IPA bath and wash for another 5 minutes.
+Do not exceed 15 minutes total IPA exposure (prevents resin softening).</p>
+</li>
+<li><p>Drying:
+Air-dry upside down for 30 minutes to allow IPA to evaporate.
+Use compressed air to remove liquid trapped inside channels.</p>
+</li>
+<li><p>UV Post-Curing (60 Seconds)
+Place the mold in a UV curing station for 1 minute (room temperature, no heat).
+Do not over-cure, as excessive UV exposure may warp the mold.</p>
+</li>
+<li><p>Inspect the Mold:
+Check for shiny areas (indicates uncured resin) and repeat IPA washing if needed.
+Ensure smooth surfaces inside channels to prevent PDMS curing inhibition.</p>
+</li>
+</ol>
+<h3>Parylene device</h3>
+<p>A parylene coating is applied to prevent PDMS curing issues and improve surface smoothness.</p>
+<h4>Why Parylene Coating?</h4>
+<p>It prevents PDMS curing inhibition from uncured resin, ensures easy demolding of PDMS without defects and creates hydrophobic surfaces to enhance fluid control.</p>
+<h4>Application Process:</h4>
+<p>The mold is placed in a parylene deposition chamber.
+A thin layer of parylene is vapor-deposited onto the mold’s surface.
+Final inspection ensures a uniform, defect-free coating.</p>
+<h3>PDMS Casting</h3>
+<h4>PDMS Preparation:</h4>
+<ol>
+<li><p>Mix PDMS (Sylgard 184).
+10:1 ratio (base to curing agent).
+Stir slowly to minimize air bubble formation.</p>
+</li>
+<li><p>Degassing:
+Place the mixture in a vacuum chamber for 30 minutes to remove air bubbles.</p>
+</li>
+</ol>
+<h4>Pouring and Curing</h4>
+<ol>
+<li><p>Pour PDMS into Mold:
+Slowly pour PDMS into the mold while tilting slightly to prevent air trapping.
+Gently tap the mold to release trapped air bubbles.</p>
+</li>
+<li><p>Final Degassing:
+Place the mold with PDMS in the vacuum chamber for 10–15 minutes.</p>
+</li>
+<li><p>Curing Process:
+Room temperature (23°C): 24 hours.
+Heat curing options:
+4 hours at 65°C (preferred).
+1 hour at 100°C (if mold can withstand heat).</p>
+</li>
+<li><p>Demolding:
+Peel PDMS off carefully to avoid tearing.
+If sticking occurs, lightly flex the mold or use compressed air to assist.</p>
+</li>
+</ol>
+<h3>Plasma bonding to glass slide</h3>
+<p>Once the PDMS device is fully cured and demolded, it needs to be plasma-treated to bond with a glass slide.</p>
+<ol>
+<li>Plasma Activation
+Place the PDMS layer and a clean glass slide inside a plasma cleaner.
+Expose both surfaces to oxygen plasma for 30–60 seconds.</li>
+<li>Bonding the Device
+Align the PDMS layer over the glass slide immediately after plasma treatment.
+Apply gentle pressure to ensure full contact without trapping air bubbles.</li>
+</ol>
+<h3>Testing</h3>
+<h4>Leak Testing:</h4>
+<p>Inject dyed water into the inlets to check for leaks or blockages.</p>
+<h4>Flow Testing with Particles:</h4>
+<p>Run a particle-laden sample to validate that the PFF separation works correctly.</p>
+<h4>Tuning for Optimization:</h4>
+<p>Adjust flow rates or tubing positioning if necessary.</p>
+<h2>Discussion:</h2>
+<h3>Why Are Resin-Printed Molds Coated with Parylene Prior to Casting the PDMS?</h3>
+<p>Resin-printed molds require parylene coating before PDMS casting to address several key issues:</p>
+<ul>
+<li><p>Prevents PDMS Curing Inhibition: 
+Some uncured photoinitiators in SLA resin can inhibit the crosslinking of PDMS, leading to sticky or uncured regions inside the microfluidic device.
+Parylene forms an inert, biocompatible barrier between the mold and PDMS.</p>
+</li>
+<li><p>Improves Mold Release:
+PDMS can adhere to untreated resin molds, making demolding difficult or damaging.
+Parylene’s low surface energy ensures the cured PDMS peels off cleanly without defects.</p>
+</li>
+<li><p>Enhances Surface Smoothness:
+SLA-printed molds can have microscale layer lines that create rough channel walls.
+A thin, conformal parylene layer smooths the mold surface, ensuring better fluid flow and reducing bubble formation in microchannels.</p>
+</li>
+<li><p>Extends Mold Longevity:
+Repeated PDMS casting without parylene may degrade the mold’s surface.
+Coating extends the usability of the mold for multiple casts.</p>
+</li>
+</ul>
+<h3>What are hypothetical applications of your microfluidic mixer or sorter?</h3>
+<p>The Pinched Flow Fractionation (PFF) microfluidic device has applications in several fields:</p>
+<p>Biomedical Diagnostics (Separation of circulating tumor cells from blood for early cancer detection.
+Cell sorting for single-cell analysis and immunology research.);
+Environmental Monitoring (Sorting microplastics in water samples for pollution analysis.
+Separating bacteria from larger particulates in water quality studies.);
+Pharmaceutical Development (Isolation of drug nanoparticles to ensure consistent dosage formulations.
+Sorting of liposomes or exosomes for targeted drug delivery.);
+Food Safety and Agriculture (Detection and separation of pathogenic bacteria from food processing liquids.
+Sorting pollen grains for agricultural research.)</p>
+<h3>Why Is This Geometry Conducive to Sorting?</h3>
+<p>The current design was optimized to enhance particle sorting efficiency by carefully defining the pinch width, outlet placement, and channel flow paths.</p>
+<ul>
+<li>Pinch Segment (Alignment Region):
+ Width: 0.75 mm (750 µm)
+ Length: 3.5 mm
+ Purpose: Forces all particles to align against one sidewall before entering the broadening region.
+ Why It Works: Ensures consistent initial positions for all particles, preventing random motion that could disrupt sorting.</li>
+<li>Broadening Segment (Separation Zone):
+ Width: Expands to 18.13 mm
+ Length: ~35 mm
+ Purpose: Allows particles to drift into distinct flow paths based on their size-dependent inertial forces.
+ Why It Works: The controlled expansion enables gradual separation, preventing turbulence or undesired mixing.</li>
+<li>Outlet Channels:
+ Width: 4 mm per channel
+ Why It Works:
+ All outlets are symmetrical, preventing preferential flow toward any one exit.
+ Wide enough to avoid pressure imbalances that could alter separation efficiency.</li>
+<li>Inlet Channel Design:
+ Two inlets (1 mm wide, 13.2 mm long) ensuring even flow distribution.
+ Why It Works: The symmetric inlet paths prevent asymmetric sheath flow, ensuring particles experience a uniform focusing effect.</li>
+</ul>
+<h3>Ensuring Equal Flow Rate Across All Outlets</h3>
+<ul>
+<li><p>Symmetric Outlet Lengths:
+All outlet channels are of equal width and SHOULD have equal length as well to ensure balanced flow resistance.</p>
+</li>
+<li><p>Equalized Flow Paths:
+The broadening segment is centrally positioned, allowing particles to separate evenly.
+The outlet paths are straight and equidistant from the broadening segment.</p>
+</li>
+<li><p>Prevention of Flow Imbalance:
+Smooth channel transitions minimize flow disturbances.
+Avoiding sharp bends in outlet paths prevents pressure variations.</p>
+</li>
+<li><p>Allowing External Flow Adjustments:
+Tubing lengths can be adjusted after the device to fine-tune outlet resistance.
+The system can integrate with a leveling manifold to maintain uniform pressure across outlets.</p>
+</li>
+</ul>
+<h3>Potential Improvements Based on Testing Results</h3>
+<ul>
+<li><p>Optimizing Pinched Width for Specific Particle Ranges:
+If smaller particles (e.g., 125 µm) don’t align well, the pinch segment may be too wide.
+If larger particles (500 µm) experience clogging, a slightly wider pinch width (~0.8 mm) may improve flow.</p>
+</li>
+<li><p>Refining Outlet Positioning:
+If unequal distribution occurs in outlets, fine-tuning channel spacing or outlet angles may help.</p>
+</li>
+<li><p>Enhancing Flow Control:
+Adding microvalves or resistors to each outlet could allow fine-tuned control of flow balance.</p>
+</li>
+<li><p>Minimizing Bubble Formation:
+Modifications to the inlet entry angle may help reduce bubble entrapment, improving reliability.</p>
+</li>
+</ul>
+<h2>Multimedia:</h2>
+<h3>Gallery:</h3>
+<img src="images/ufluidic-cad-model.PNG" alt="microfluidic CAD model" width="20%">
+<img src="images/ufluidic-resin-print1.jpg" alt="Resin printed device 1" width="20%">
+<img src="images/ufluidic-resin-print2.jpg" alt="Resin printed device 2" width="20%">
+<img src="images/ufluidic-pdms-cast1.jpg" alt="PDMS Cast device 1" width="20%">
+<img src="images/ufluidic-pdms-cast2.jpg" alt="PDMS Cast device 2" width="20%">
+
+<h3>CAD Model:</h3>
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH286ddQT78850c0d8a4a64a410f4e6cb3ae?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    </div>
+</main>
+<div id="footer-root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" src="react-components.js"></script>
+<script type="text/babel">
+    ReactDOM.createRoot(document.getElementById('header-root')).render(
+        <Header pageTitle="Microfluidic Pinch Flow Fractionation" />
+    );
+    ReactDOM.createRoot(document.getElementById('footer-root')).render(<Footer />);
+</script>
+</body>
+</html>

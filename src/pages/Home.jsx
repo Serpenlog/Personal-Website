@@ -1,6 +1,8 @@
 import { projects, homeHighlights } from "../data/projects";
 import ProjectTile from "../components/ProjectTile";
 
+const assetBase = `${import.meta.env.BASE_URL}assets/`;
+
 const Home = () => {
   const highlightProjects = homeHighlights
     .map((id) => projects.find((project) => project.id === id))
@@ -10,7 +12,7 @@ const Home = () => {
     <div className="page">
       <section
         className="hero"
-        style={{ backgroundImage: "url(/assets/background.jpg)" }}
+        style={{ backgroundImage: `url(${assetBase}background.jpg)` }}
       >
         <div className="hero__overlay">
           <h1>Serpenlog</h1>

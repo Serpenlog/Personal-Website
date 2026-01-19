@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print-in-Place Pliers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-root"></div>
+<main>
+    <div id="markdown-content">
+<h1>Print in Place Pliers!!!</h1>
+<h2>Understanding Print-in-Place 3D Printing</h2>
+<p>Print-in-place refers to a 3D printing method where interlocking or movable components are fabricated simultaneously as a single, unified structure. This approach leverages precise design and printing tolerances to ensure that parts remain distinct yet functional upon completion. The key advantage is the elimination of manual assembly and post-processing, streamlining the production process and reducing the potential for assembly errors.</p>
+<h2>Exploring Applications of Print-in-Place Designs</h2>
+<p>The versatility of print-in-place techniques has been demonstrated across various innovative projects, including:</p>
+<ul>
+<li><a href="https://www.instructables.com/Print-in-Place-Spring-Loaded-Box/">Spring-Loaded Boxes:</a> 
+Designed to print as a single piece, these boxes incorporate built-in hinges and latches, functioning immediately after printing without additional assembly.</li>
+<li><a href="https://www.printables.com/model/543260-collapsing-katana-v2-print-in-place">Collapsible Katanas:</a>
+These intricate models feature telescoping blades that extend and retract, all printed as a cohesive unit, showcasing the potential for complex, movable designs.</li>
+<li><a href="https://www.thingiverse.com/thing:53451">Gear Bearings:</a> 
+Functional bearings printed in one piece, demonstrating the ability to create moving mechanical parts without separate components.</li>
+</ul>
+<h2>Selecting Suitable Materials for Print-in-Place Projects</h2>
+<p>Choosing the appropriate material is crucial for the success of print-in-place designs. Materials must balance strength, flexibility, and ease of printing to ensure functional movement and durability. Commonly used materials include:</p>
+<ul>
+<li>Polylactic Acid (PLA): Known for its ease of printing and biodegradability, PLA is a popular choice for print-in-place designs. However, its brittleness may limit the durability of moving parts.</li>
+<li>Acrylonitrile Butadiene Styrene (ABS): Offers greater strength and flexibility compared to PLA, making it suitable for functional parts requiring durability. ABS&#39;s higher melting temperature necessitates a heated print bed and controlled printing environment.</li>
+<li>Thermoplastic Polyurethane (TPU): A flexible, rubber-like material ideal for designs requiring elasticity. TPU&#39;s flexibility allows for the creation of complex, movable parts that can withstand repeated use.</li>
+</ul>
+<h2>Inside the Design: Iteration, Materials &amp; Functionality</h2>
+<h3>Modular by Nature: A Five-Part Assembly</h3>
+<p>While traditional print-in-place models are typically printed as one single assembly, I took a modular approach to refine both function and fit. The pliers are composed of five interlocking parts:</p>
+<ul>
+<li>2 Jaw components (PLA)</li>
+<li>2 Handle components (PLA)</li>
+<li>1 Central spring piece (TPU)</li>
+</ul>
+<p>Using PLA for the rigid sections and TPU for the flexible spring made it possible to balance strength and elasticity. If you have a multi-material 3D printer, these could potentially be printed as one cohesive unit. But even printed separately, the components snap together with a puzzle-like interlock that keeps them secure during use, while still allowing disassembly.</p>
+<h3>Iteration for Optimization</h3>
+<p>In order to account for clearance and the expansion of the filament and accuracy of the printed I printed the jaws and handle once but printed several different versions of the center piece and used the one that fit the best. The goal was to achieve a snug, reliable fit that wouldn’t fall apart under pressure, but also wouldn’t jam during assembly.</p>
+<p>The spring mechanism itself is deceptively simple: it’s just the center TPU piece. But by removing the top and bottom layers in the slicer and relying solely on infill (set to monotonic at 13%), the piece behaves like a spring when compressed. To optimize this, I rotated the part 45 degrees during printing to align the infill parallel to the wall, this maximized flexibility in the direction of force when squeezing the pliers. I also increased perimeter walls to 4 for durability and ended up using the center piece which scaled the X and Y dimensions to about 105%.</p>
+<h4>Specifications:</h4>
+<ul>
+<li><p>Jaw length: ~25mm</p>
+</li>
+<li><p>Handle length: ~70mm</p>
+</li>
+<li><p>Material usage: ~12g total filament</p>
+</li>
+<li><p>Print time: &lt;1 hour</p>
+</li>
+<li><p>Assembly: Snap-fit, no tools or adhesives</p>
+</li>
+</ul>
+<p>These specs make the pliers not only compact and comfortable to hold but also highly efficient to print—ideal for quick prototypes, educational kits, or functional models.</p>
+<h4>Print Settings:</h4>
+<ul>
+<li>Printer: Voron (FDM)</li>
+<li>Nozzle size: 0.4mm (PLA), 0.6mm (TPU)</li>
+<li>Material: PLA for jaws and handles, TPU for the central spring</li>
+<li>PLA parts:<ul>
+<li>printed with default slicer settings</li>
+</ul>
+</li>
+<li>TPU spring:<ul>
+<li>No top/bottom layers</li>
+<li>13% monotonic infill</li>
+<li>4 perimeter walls</li>
+<li>Rotated 45 degrees for optimal infill direction</li>
+<li>Scaled to 105% in X/Y for final fit</li>
+</ul>
+</li>
+</ul>
+<h2>Gallery</h2>
+<img src="images/IMG_6752.jpg" alt="pliers0" width="20%">
+<img src="images/IMG_6740.jpg" alt="pliers1" width="20%">
+<img src="images/IMG_6741.jpg" alt="pliers2" width="20%">
+<img src="images/IMG_6742.jpg" alt="pliers3" width="20%">
+<img src="images/IMG_6743.jpg" alt="pliers4" width="20%">
+<iframe src="https://giphy.com/embed/YAhs3rJPzi5hJgROhP" width="270" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/YAhs3rJPzi5hJgROhP">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/gA7QCfl7E8DRRx9t9y" width="270" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/gA7QCfl7E8DRRx9t9y">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/s9vERsKYhdbtLBrSJH" width="270" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/s9vERsKYhdbtLBrSJH">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/FHk67ShcxPJfALXXQQ" width="270" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/FHk67ShcxPJfALXXQQ">via GIPHY</a></p>
+
+<h3>CAD Model:</h3>
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH286ddQT78850c0d8a4b3b90ac2a874adfa?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    </div>
+</main>
+<div id="footer-root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" src="react-components.js"></script>
+<script type="text/babel">
+    ReactDOM.createRoot(document.getElementById('header-root')).render(
+        <Header pageTitle="Print-in-Place Pliers" />
+    );
+    ReactDOM.createRoot(document.getElementById('footer-root')).render(<Footer />);
+</script>
+</body>
+</html>

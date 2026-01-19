@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syringe Pump Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header-root"></div>
+<main>
+    <div id="markdown-content">
+<h1>Syringe Pump Project</h1>
+<p>The syringe pump uses a motor rotating a lead screw, with a nut that drives the plunger forward to push the fluid out of the syringe barrel. It offers high accuracy and sterility, making it a valuable tool in highly critical and controlled environments. Because of this, a syringe pump can be very expensive, but this project goes over a more affordable alternative by useing CAD, 3D printing, and electrical prototyping to construct a customizable and cost-effective syringe pump. CAD models of the motor and syringe mount as well as the electrical wiring enclosure were designed in Fusion360, and the wiring and controlling were done using a breadboard and Arduino microcontroller.</p>
+<h2><a href="https://github.com/Serpenlog/SyringePumpProject/blob/main/SyringePumpCode.cpp">Code to run syringe pump</a></h2>
+<h2>Operating the Syringe Pump:</h2>
+<ol>
+<li>   Fill the syringe with the desired volume of liquid.</li>
+<li>   Plug the power supply into an outlet to provide AC input to the board.</li>
+<li>   Connect the microcontroller to the computer with the Arduino code via a USB-B port.</li>
+<li>   Use the backward motion button to retract the carriage far enough to accommodate the length of the chosen syringe.
+a.    The LED light will be green while in motion and can be double-clicked to pause the motion in either direction (yellow)</li>
+<li>   Insert the syringe wings into the syringe end support slit (orient the syringe facing away from the motor).</li>
+<li>   Use the forward motion button to align the carriage with the end of the syringe plunger.</li>
+<li>   Specify the syringe size and requested flow rate in the Arduino code.</li>
+<li>   Press the forward motion button to begin the motion of the carriage against the plunger to start pushing fluid out of the syringe barrel at a constant rate.</li>
+<li>   The potentiometer can be used to update the flow rate manually and the exact flow rate can be viewed through the serial monitor on the computer.</li>
+<li>   Once the plunger reaches the end, the limit switch on the carriage will be activated and the motion will stop—indicated by a red LED light.</li>
+<li>   The syringe can be removed and the carriage can be moved back using the backward button.</li>
+</ol>
+<h2>Off-the-shelf parts:</h2>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>250 mm lead screw with 2 mm pitch and 2 mm lead</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1/4&quot; x 8 mm Flexible Coupling</td>
+<td>1</td>
+</tr>
+<tr>
+<td>200 mm linear rod with 8 mm diameter</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LM8UU Linear bearing for 8 mm diameter rod</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2040 Aluminum Extrusion 1&#39; Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Nema 17 Stepper Motor</td>
+<td>1</td>
+</tr>
+<tr>
+<td>MEAN WELL RQ-65D AC-DC Power Supply Quad Output 5V 12V 24V 12V 4 Amp</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Arduino Uno</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A4988 Stepper Driver</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Small Breadboard</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Panel Mount Latching Push Buttons</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Panel Mount Momentary Push Buttons</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Limit Switch</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RGB Common Cathode LED</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Wires, Fasteners, Resistors</td>
+<td>X</td>
+</tr>
+</tbody></table>
+<h2>Parts that were 3D printed:</h2>
+<table>
+<thead>
+<tr>
+<th>3D printed parts</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Carriage</td>
+<td>ABS</td>
+</tr>
+<tr>
+<td>End Support</td>
+<td>ABS</td>
+</tr>
+<tr>
+<td>Motor Mounting Plate</td>
+<td>ABS</td>
+</tr>
+<tr>
+<td>Enclosure Base</td>
+<td>PLA</td>
+</tr>
+<tr>
+<td>Enclosure Lid</td>
+<td>PLA</td>
+</tr>
+</tbody></table>
+<p>The motor mounting plate is printed in ABS because of its strength and higher melting point that accommodates the weight and high operating temperature of the motor. The carriage and End support was also printed in ABS because they were printed together, though they aren&#39;t as important to be printed in ABS as compared to the motor mounting plate.</p>
+<h2>Gallery:</h2>
+<p><img src="images/syringe-pump.jpg" alt="Syringe Pump Finished">
+<img src="images/syringe-pump-render1.png" alt="Syringe Pump Rendering 1">
+<img src="images/syringe-pump-render2.png" alt="Syringe Pump Rendering 2"></p>
+<h2>CAD Model:</h2>
+<iframe src="https://vanderbilt643.autodesk360.com/shares/public/SH286ddQT78850c0d8a4c39d816191a459a7?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    </div>
+</main>
+<div id="footer-root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" src="react-components.js"></script>
+<script type="text/babel">
+    ReactDOM.createRoot(document.getElementById('header-root')).render(
+        <Header pageTitle="Syringe Pump Project" />
+    );
+    ReactDOM.createRoot(document.getElementById('footer-root')).render(<Footer />);
+</script>
+</body>
+</html>
